@@ -307,8 +307,8 @@
 </table>
 
 <h2>Hyper-parameters</h2>
-The architecture of our proposed model was based on <a href="/../">LPCTron</a>, replacing the CBHG block in the encoder with 3 convolution layers with 512 channels and 5 kernels follwd by a single bi-directional LSTM layer with 128 cells.<br>
-For the reference encoder, the same architecture used in <a href="/../">GST</a> was used. The number of heads and the dimension of output embedding of the multi-head attention in the emotion encoder were 4 and 256, respectively. <br>
+The architecture of our proposed model was based on <a href="https://arxiv.org/abs/2111.09052">LPCTron</a>, replacing the CBHG block in the encoder with 3 convolution layers with 512 channels and 5 kernels follwd by a single bi-directional LSTM layer with 128 cells.<br>
+For the reference encoder, the same architecture used in <a href="https://arxiv.org/abs/1803.09017">GST</a> was used. The number of heads and the dimension of output embedding of the multi-head attention in the emotion encoder were 4 and 256, respectively. <br>
 The token embedding dimension was set to 64. To use the ouputs of the speaker and language look-up tables as disentangled tokens, their dimensions matched those of the token embeddings. The number of tokens of emotion and residual token sets was five, and they were initialized orthogonally. The speaker and language embeddings were projected into 256 dimensions by a linear layer of the corresponding dimension size. <br>
 
 <script>
