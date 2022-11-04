@@ -34,11 +34,19 @@
 <h3>Comparison with the baseline methods</h3>
 <h4>EN2KR - Synthesized Korean emotional speech from English neutral only speakers</h4>
 <br />
-<table>
+<table class="ui table vertical devTableStyle">
+<colgroup>
+	<col width="300px">
+	<col width="120px">
+	<col width="300px">
+	<col width="300px">
+	<col width="300px">
+	<col width="300px">
+</colgroup>
 <tbody>
 <tr>
-<th style="text-align: left;">Condition</th>
-<th style="text-align: left;">Synthesized</th>
+<th>Condition</th>
+<th colspan="5"><span>Synthesized</span></th>
 <th></th><th></th><th></th><th></th><th></th>
 </tr>
 <tr>
@@ -49,16 +57,25 @@
 	<td><center>Sad</center></td>
 	<td><center>Angry</center></td>
 </tr>
+<tr>
 <td><audio controls="controls"><source src="samples/Compare/Korean/p339_030_mic1.wav" /></audio></td>
 <td></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;"><i>좌익수로 가장 많은 경기에 나섰다.</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;"><i>동생 뼈는 아주 튼튼하구나.</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;"><i>좌익수로 가장 많은 경기에 나섰다.</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;"><i>좌익수로 가장 많은 경기에 나섰다.</i></td>
+<td style="text-align: left; font-size:0.9em;"><i>좌익수로 가장 많은 경기에 나섰다.</i></td>
+<td style="text-align: left; font-size:0.9em;"><i>동생 뼈는 아주 튼튼하구나!</i></td>
+<td style="text-align: left; font-size:0.9em;"><i>편지로라도 그의 어머니에게 하소연할 수도 없게 된 오늘날 신세이다.</i></td>
+<td style="text-align: left; font-size:0.9em;"><i>비단을 더러운 발로 아주 못쓰게 해놓았다.</i></td>
 </tr>
 <tr>
 <td></td>
-<td><center>LB</center></td>
+<td></td>
+<td style="text-align: left; color: grey; font-size:0.8em;"><i>jwaigsulo gajang manh-eun gyeong-gie naseossda.</i></td>
+<td style="text-align: left; color: grey; font-size:0.8em;"><i>dongsaeng ppyeoneun aju teunteunhaguna!</i></td>
+<td style="text-align: left; color: grey; font-size:0.8em;"><i>pyeonjilolado geuui eomeoniege hasoyeonhal sudo eobsge doen oneulnal sinseida.</i></td>
+<td style="text-align: left; color: grey; font-size:0.8em;"><i>bidan-eul deoleoun ballo aju mos-sseuge haenoh-assda.</i></td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align: left;padding-right: 20px;padding-left: 20px;"><center>LB</center></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p339_Neutral.wav" /></audio></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p339_Happy.wav" /></audio></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p339_Sad.wav" /></audio></td>
@@ -66,7 +83,7 @@
 </tr>
 <tr>
 <td></td>
-<td><center>GST</center></td>
+<td style="text-align: left;padding-right: 20px;padding-left: 20px;"><center>GST</center></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p339_Neutral.wav" /></audio></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p339_Happy.wav" /></audio></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p339_Sad.wav" /></audio></td>
@@ -74,7 +91,7 @@
 </tr>
 <tr>
 <td></td>
-<td><center>GST-C</center></td>
+<td style="text-align: left;padding-right: 20px;padding-left: 20px;"><center>GST-C</center></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p339_Neutral.wav" /></audio></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p339_Happy.wav" /></audio></td>
 <td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p339_Sad.wav" /></audio></td>
@@ -92,173 +109,215 @@
 </table>
 
 
+<table class="ui table vertical devTableStyle">
+<colgroup>
+	<col width="150px">
+	<col width="120px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+</colgroup>
+
+<tbody>
+<tr>
+	<td>Speaker: p363</td>
+	<td></td>
+	<td><center>Neutral</center></td>
+	<td><center>Happy</center></td>
+	<td><center>Sad</center></td>
+	<td><center>Angry</center></td>
+</tr>
+<br />
+<tr>
+<td><audio controls="controls"><source src="samples/Compare/Korean/p363_033_mic1.wav" /></audio></td>
+<td></td>
+<td style="text-align: left; font-size: 0.9em"><i>뺨과 턱에다 붙이고 활 시위를 당기세요.</i></td>
+<td style="text-align: left; font-size: 0.9em"><i>난 널 싫어한 적이 없어.</i></td>
+<td style="text-align: left; font-size: 0.9em"><i>저는 그런 적 없어요.</i></td>
+<td style="text-align: left; font-size: 0.9em"><i>이제 집에 가고 싶단 말이야!</i></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="text-align: left; color: grey; font-size: 0.8em"><i>ppyamgwa teog-eda but-igo hwal siwileul dang-giseyo.</i></td>
+<td style="text-align: left; color: grey; font-size: 0.8em"><i>nan neol silh-eohan jeog-i eobs-eo.</i></td>
+<td style="text-align: left; color: grey; font-size: 0.8em"><i>jeoneun geuleon jeog eobs-eoyo.</i></td>
+<td style="text-align: left; color: grey; font-size: 0.8em"><i>ije jib-e gago sipdan mal-iya!</i></td>
+</tr>
+<tr>
+<td></td>
+<td><center>LB</center></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p363_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p363_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p363_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys02_p363_Angry.wav" /></audio></td>
+</tr>
+<tr>
+<td></td>
+<td><center>GST</center></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p363_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p363_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p363_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys03_p363_Angry.wav" /></audio></td>
+</tr>
+<tr>
+<td></td>
+<td><center>GST-C</center></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p363_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p363_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p363_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys04_p363_Angry.wav" /></audio></td>
+</tr>
+<tr>
+<td></td>
+<td><center>Proposed</center></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys05_p363_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys05_p363_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys05_p363_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/Korean/sys05_p363_Angry.wav" /></audio></td>
+</tr>
+</tbody>
+</table>
+
+<br /> <br /> <br />
+<h4>KR2EN - Synthesized English emotional speech from Korean neutral only speakers</h4>
+<br />
+<table class="ui table vertical devTableStyle">
+<colgroup>
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+</colgroup>
+
+<tbody>
+<tr>
+<th>Condition</th>
+<th colspan="5"><span>Synthesized</span></th>
+<th></th><th></th><th></th><th></th><th></th>
+</tr>
+<tr>
+	<td>Speaker: p339</td>
+	<td></td>
+	<td><center>Neutral</center></td>
+	<td><center>Happy</center></td>
+	<td><center>Sad</center></td>
+	<td><center>Angry</center></td>
+</tr>
+<td><audio controls="controls"><source src="samples/Compare/English/gt_female.wav" /></audio></td>
+<td></td>
+<td colspan="5" style="text-align: center;padding-right: 20px;padding-left: 20px;"><span><i>Many complicated ideas about the rainbow have been formed.</i></span></td>
+</tr>
+<tr>
+<td></td>
+<td><center>LB</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_female_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_female_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_female_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_female_Angry.wav" /></audio></td>
+</tr>
+<tr>
+<td></td>
+<td><center>GST</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_female_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_female_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_female_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_female_Angry.wav" /></audio></td>
+</tr>
+<tr>
+<td></td>
+<td><center>GST-C</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_female_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_female_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_female_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_female_Angry.wav" /></audio></td>
+</tr>
+<tr>
+<td></td>
+<td><center>Proposed</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_female_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_female_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_female_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_female_Angry.wav" /></audio></td>
+</tr>
+</tbody>
+</table>
 
 
-<h3>Copy-Synthesis Samples - Footprint-Efficiency</h3>
-<table>
+<table class="ui table vertical devTableStyle">
+<colgroup>
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+	<col width="150px">
+</colgroup>
 <tbody>
 <tr>
-<td>Example 1 :</td>
-<td>You'll feel better if you change your mind.</td>
+<th>Condition</th>
+<th colspan="5"><span>Synthesized</span></th>
+<th></th><th></th><th></th><th></th><th></th>
 </tr>
 <tr>
-<td>Example 2 :</td>
-<td>I told the crew that your background.</td>
+	<td>Speaker: p363</td>
+	<td></td>
+	<td><center>Neutral</center></td>
+	<td><center>Happy</center></td>
+	<td><center>Sad</center></td>
+	<td><center>Angry</center></td>
 </tr>
-</tbody>
-</table>
-<br />
-<table>
-<tbody>
-<tr>
-<th style="text-align: center;padding-right: 20px;padding-left: 20px;">Systems</th>
-<th style="text-align: center;padding-right: 20px;padding-left: 20px;"><i>n<sub>e</sub></i></th>
-<th>Example 1</th>
-<th>Example 2</th>
+<td><audio controls="controls"><source src="samples/Compare/English/gt_male.wav" /></audio></td>
+<td></td>
+<td colspan="5" style="text-align: center;padding-right: 20px;padding-left: 20px;"><span><i>Sentencing is also being considered in that review.</i></span></td>
 </tr>
 <tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;"><i>Original</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">-</td>
-<td><audio controls="controls"><source src="samples/VC1_1_ori.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_ori.wav" /></audio></td>
+<td></td>
+<td><center>LB</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_male_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_male_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_male_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys02_male_Angry.wav" /></audio></td>
 </tr>
 <tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;" rowspan="2"><i>B-LPCNet2-L</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">128</td>
-<td><audio controls="controls"><source src="samples/VC1_1_blpcnet2l_e128.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_blpcnet2l_e128.wav" /></audio></td>
+<td></td>
+<td><center>GST</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_male_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_male_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_male_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys03_male_Angry.wav" /></audio></td>
 </tr>
 <tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">1</td>
-<td><audio controls="controls"><source src="samples/VC1_1_blpcnet2l_e1.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_blpcnet2l_e1.wav" /></audio></td>
+<td></td>
+<td><center>GST-C</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_male_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_male_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_male_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys04_male_Angry.wav" /></audio></td>
 </tr>
 <tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;" rowspan="2"><i>B-LPCNet2-R</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">128</td>
-<td><audio controls="controls"><source src="samples/VC1_1_blpcnet2r_e128.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_blpcnet2r_e128.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">1</td>
-<td><audio controls="controls"><source src="samples/VC1_1_blpcnet2l_e1.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_blpcnet2l_e1.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;" rowspan="2"><i>B-LPCNet2-S</i></td>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">128</td>
-<td><audio controls="controls"><source src="samples/VC1_1_blpcnet2s_e128.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_blpcnet2s_e128.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;padding-right: 20px;padding-left: 20px;">1</td>
-<td><audio controls="controls"><source src="samples/VC1_1_blpcnet2s_e1.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC1_2_blpcnet2s_e1.wav" /></audio></td>
+<td></td>
+<td><center>Proposed</center></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_male_Neutral.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_male_Happy.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_male_Sad.wav" /></audio></td>
+<td><audio controls="controls"><source src="samples/Compare/English/sys05_male_Angry.wav" /></audio></td>
 </tr>
 </tbody>
 </table>
 
-<h3>Copy-Synthesis Samples - Computational Efficiency </h3>
-<table>
-<tbody>
-<tr>
-<td>Example on GRU<sub>A</sub> units (<i>S</i>=1):</td>
-<td>How about a fun movie to clear your mind?</td>
-</tr>
-</tbody>
-</table>
-<br />
-<table>
-<tbody>
-<tr>
-<th style="text-align: center;"><i>n<sub>a</sub></i></th>
-<th>Softmax</th>
-<th>Single Logistic</th>
-</tr>
-<tr>
-<td style="text-align: center;">384</td>
-<td><audio controls="controls"><source src="samples/VC2_sm384.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC2_sl384.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">320</td>
-<td><audio controls="controls"><source src="samples/VC2_sm320.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC2_sl320.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">272</td>
-<td><audio controls="controls"><source src="samples/VC2_sm272.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC2_sl272.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">224</td>
-<td><audio controls="controls"><source src="samples/VC2_sm224.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC2_sl224.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">176</td>
-<td><audio controls="controls"><source src="samples/VC2_sm176.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC2_sl176.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">144</td>
-<td><audio controls="controls"><source src="samples/VC2_sm144.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC2_sl144.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;"><b><i>Original</i></b></td>
-<td style="text-align: center;" colspan="2"><audio controls="controls"><source src="samples/VC2_ori.wav" /></audio></td>
-</tr>
-</tbody>
-</table>
-<br />
-<table>
-<tbody>
-<tr>
-<td>Example on Bunch Size (<i>n<sub>a</sub></i>=384):</td>
-<td>Unable to find what you asked for.</td>
-</tr>
-</tbody>
-</table>
-<br />
-<table>
-<tbody>
-<tr>
-<th style="text-align: center;"><i>S</i></th>
-<th>Softmax</th>
-<th>Single Logistic</th>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td><audio controls="controls"><source src="samples/VC3_sm1.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC3_sl1.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td><audio controls="controls"><source src="samples/VC3_sm2.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC3_sl2.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td><audio controls="controls"><source src="samples/VC3_sm3.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC3_sl3.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td><audio controls="controls"><source src="samples/VC3_sm4.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC3_sl4.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td><audio controls="controls"><source src="samples/VC3_sm5.wav" /></audio></td>
-<td><audio controls="controls"><source src="samples/VC3_sl5.wav" /></audio></td>
-</tr>
-<tr>
-<td style="text-align: center;"><b><i>Original</i></b></td>
-<td style="text-align: center;" colspan="2"><audio controls="controls"><source src="samples/VC3_ori.wav" /></audio></td>
-</tr>
-</tbody>
-</table>
+<h2>Hyper-parameters</h2>
+The architecture of our proposed model was based on <a href="/../">LPCTron</a>, replacing the CBHG block in the encoder with 3 convolution layers with 512 channels and 5 kernels follwd by a single bi-directional LSTM layer with 128 cells.<br>
+For the reference encoder, the same architecture used in <a href="/../">GST</a> was used. The number of heads and the dimension of output embedding of the multi-head attention in the emotion encoder were 4 and 256, respectively. <br>
+The token embedding dimension was set to 64. To use the ouputs of the speaker and language look-up tables as disentangled tokens, their dimensions matched those of the token embeddings. The number of tokens of emotion and residual token sets was five, and they were initialized orthogonally. The speaker and language embeddings were projected into 256 dimensions by a linear layer of the corresponding dimension size. <br>
+
+<script>
+	$(".devTableStyle td").attr("style", "word-break:break-all");
+</script>
+
 </article>
 </div>
 </body>
