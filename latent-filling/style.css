@@ -1,7 +1,7 @@
 td:nth-child(1), th:nth-child(1) {
-    background-color: #D6EEEE;
+    background-color: #F5F5F5;
 }
 
 td:nth-child(9), th:nth-child(9) {
-    background-color: #F5F5F5;
+    background-color: #D6EEEE;
 }
