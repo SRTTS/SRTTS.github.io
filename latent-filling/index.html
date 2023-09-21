@@ -70,10 +70,18 @@
         <div class="col">
 		<a href="/../index.html">Click here for other works from Samsung Research TTS Team. </a>
         </div>
-
+        <hr>
+        <div class="col">
+            <h3>Contents</h3>
+            <ol>
+            <li><a href="#id1">Intra-lingual Zero-shot Experiments (English -> English)</a></li>
+            <li><a href="#id2">Cross-lingual Zero-shot Experiments (Korean -> English)</a></li>
+            <li><a href="#id3">Ablation study</a></li>
+            </ol>
+        </div>
         <hr>
 
-        <div class='col'>
+        <div class='col' id="id1">
             <div class='row'>
                 <div class='col'>
                     <p class='h3 font-weight-bold'>1. Intra-lingual Zero-shot Experiments (English -> English) </p>
@@ -299,7 +307,7 @@
         <br>
         <br>
         <hr>
-        <div class='col'>
+        <div class='col' id="id2">
             <div class='row'>
                 <div class='col'>
                     <p class='h3 font-weight-bold'>2. Cross-lingual Zero-shot Experiments (Korean -> English) </p>
@@ -524,7 +532,143 @@
             </div>  <!--  end row -->
         <br>
         <br>
+        <hr>
         </div>
+        <div class='col' id="id3">
+            <div class='row'>
+                <div class='col'>
+                    <p class='h3 font-weight-bold'>3. Ablation Study</p>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> These take the shape of a long round arch, with its path high above, and its two ends apparently beyond the horizon.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table border="1" bordercolor="c8c8c8" width="900px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o noise adding</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o interpolation</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> These take the shape of a long round arch, with its path high above, and its two ends apparently beyond the horizon.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table border="1" bordercolor="c8c8c8" width="900px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o noise adding</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o interpolation</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> These take the shape of a long round arch, with its path high above, and its two ends apparently beyond the horizon.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table border="1" bordercolor="c8c8c8" width="900px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o noise adding</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o interpolation</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+        </div>
+        <br>
+        <br>
     </div>  <!--  end container -->
 </body>
 
