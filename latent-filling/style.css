@@ -1,0 +1,12 @@
+#tableA td:nth-child(1), #tableA th:nth-child(1){
+    background-color: #F5F5F5;
+}
+#tableA td:nth-child(9), #tableA th:nth-child(9){
+    background-color: #D6EEEE;
+}
+#tableB td:nth-child(1), #tableB th:nth-child(1){
+    background-color: #F5F5F5;
+}
+#tableB td:nth-child(4), #tableB th:nth-child(4){
+    background-color: #D6EEEE;
+}

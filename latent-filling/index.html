@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Audio samples from "Latent Filling: Latent Space Data Augmentation for Zero-shot Speech Synthesis"</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156162365-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-156162365-1');
+    </script>
+</head>
+
+<body>
+    <div class="container" style="max-width:1350px">
+        <hr style="border: solid 1px grey;">
+        <div class='row mt-4 mb-4'>
+            <div class='col text-center'>
+                <p class="h2">Latent Filling: Latent Space Data Augmentation for Zero-shot Speech Synthesis</p>
+            </div>
+        </div>
+        <hr style="border: solid 1px grey;">
+    </div>
+    <div class="container" style="max-width:1350px">
+        <!-- authors -->
+        <div class='row text-center h4 font-weight-normal pl-1 pr-1 mt-1 mb-5'>
+            <a class="col-md-12 col-xs-12 text-dark"><span>Jae-Sung Bae, Joun Yeop Lee, Ji-Hyun Lee, Seongkyu Mun, Taehwa Kang, Hoon-Young Cho, Chanwoo Kim</span></a>
+        </div>
+
+        <!-- affiliations -->
+
+        <div class='row text-center h5 font-weight-light pl-4 pr-4 mb-4' style="font-style:italic">
+                <span class="col-md-12 col-xs-12 text-dark">Samsung Research<br>Seoul, Republic of Korea</span>
+        </div>
+
+        <!-- picture or gif below the author -->
+        <!-- <div class='row justify-content-center'  style="position: relative; width: 100%;height: 0;padding-bottom: 33%; margin:0">
+                <img
+                    class="img-fluid rounded mx-auto d-block"
+                    src="./assets/test1.gif" alt="test1.gif"
+                    style="position:absolute; width:100%; height:100%; top:0px; left:0px;"
+                    srcset="./assets/test1.gif "
+                    sizes="(min-width: 768px) 1536px, 100vw"
+                >
+			</div> -->
+
+        <!-- Paper section -->
+        <div class='col text-center'>
+            <p class='h3 font-weight-bold '>Abstract</p>
+
+            <div class="container" style="max-width:850px; margin-top: 20px; margin-bottom: 40px">
+                <p style='line-height:1.3; font-size:large; text-align: justify'>
+                    Previous works in zero-shot text-to-speech (ZS-TTS) have attempted to enhance its systems by enlarging the training data through crowd-sourcing or augmenting existing speech data. However, the use of low-quality data has led to a decline in the overall system performance. To avoid such degradation, instead of directly augmenting the input data, we propose a latent filling (LF) method that adopts simple but effective latent space data augmentation in the speaker embedding space of the ZS-TTS system. By incorporating a consistency loss, LF can be seamlessly integrated into existing ZS-TTS systems without the need for additional training stages. Experimental results show that LF significantly improves speaker similarity while preserving speech quality.
+                </p>
+            </div>
+        </div>
+
+        <div class="col">
+		<a href="/../index.html">Click here for other works from Samsung Research TTS Team. </a>
+        </div>
+        <hr>
+        <div class="col">
+            <h3>Contents</h3>
+            <ol>
+            <li><a href="#id1">Intra-lingual Zero-shot Experiments (English -> English)</a></li>
+            <li><a href="#id2">Cross-lingual Zero-shot Experiments (Korean -> English)</a></li>
+            <li><a href="#id3">Ablation study</a></li>
+            </ol>
+        </div>
+        <hr>
+
+        <div class='col' id="id1">
+            <div class='row'>
+                <div class='col'>
+                    <p class='h3 font-weight-bold'>1. Intra-lingual Zero-shot Experiments (English -> English) </p>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> These take the shape of a long round arch, with its path high above, and its two ends apparently beyond the horizon.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1"  bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_00_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> The actual primary rainbow observed is said to be the effect of super-imposition of a number of bows.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_01_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_02_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> The Greeks used to imagine that it was a sign from the gods to foretell war or heavy rain.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/en_03_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <hr>
+        <div class='col' id="id2">
+            <div class='row'>
+                <div class='col'>
+                    <p class='h3 font-weight-bold'>2. Cross-lingual Zero-shot Experiments (Korean -> English) </p>
+                    <p class='h6 font-weight-normal'>*: Korean speech samples</p>
+                </div>
+            </div>
+        <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> Hawkeye started, and dropped his rifle, when, directed by the finger of his companion, the stranger came under his view.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re*</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_00_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> "I'm glad you like it," says Wylder, chuckling benignantly on it, over his shoulder.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re*</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_01_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> When the sunlight strikes raindrops in the air, they act as a prism and form a rainbow.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re*</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_02_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> Even though the show is seriously exacting, physically demanding.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableA" border="1" bordercolor="c8c8c8" width="1260px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT*</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re*</th>
+                            <th width="140px" style="text-align: center" scope="col">SC-GlowTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">YourTTS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+CS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+PS</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF<br>(Proposed)</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ko_03_sys08.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>  <!--  end col -->
+            </div>  <!--  end row -->
+        <br>
+        <br>
+        <hr>
+        </div>
+        <div class='col' id="id3">
+            <div class='row'>
+                <div class='col'>
+                    <p class='h3 font-weight-bold'>3. Ablation Study</p>
+                </div>
+            </div>
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> Ms. Anderson yesterday put a brave face on the departure.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableB" border="1" bordercolor="c8c8c8" width="900px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o noise adding</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o interpolation</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_00_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableB" border="1" bordercolor="c8c8c8" width="900px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o noise adding</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o interpolation</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_01_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+            <br>
+            <div class='row'>
+                <div class="col">
+                    <p class="h5 font-weight-normal"><b>Text:</b> Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</p>
+                </div>
+            </div>
+            <div class='row'>
+                <div class="col">
+                <table id="tableB" border="1" bordercolor="c8c8c8" width="900px">
+                    <tbody>
+                        <tr>
+                            <th width="140px" style="text-align: center" scope="col">Reference</th>
+                            <th width="140px" style="text-align: center" scope="col">GT</th>
+                            <th width="140px" style="text-align: center" scope="col">GT-re</th>
+                            <th width="140px" style="text-align: center" scope="col">Baseline+LF</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o noise adding</th>
+                            <th width="140px" style="text-align: center" scope="col">w/o interpolation</th>
+                        </tr>
+                        <tr>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_ref.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys05.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                            <td width="140px" style="text-align: center"><audio controls controlsList="nodownload" style='display: inline-block; padding:2px; width:140px'>
+                                <source src="./samples/ablation_02_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>  <!-- End of row -->
+        </div>
+        <br>
+        <br>
+    </div>  <!--  end container -->
+</body>
+
+</html>
