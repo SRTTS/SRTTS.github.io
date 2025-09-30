@@ -6,7 +6,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Audio samples from "Hierarchical Discrete Flow Matching for Multi-Codebook Codec-based Text-to-Speech"</title>
+    <title>Audio samples from "Guided Discrete Flow Matching for Step-Efficient Zero-Shot Text-to-Speech"</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156162365-1&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SSN01ZZW8G&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156162365-1&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156162365-1&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SSN01ZZW8G&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156162365-1&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SSN01ZZW8G&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SSN01ZZW8G&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-SSN01ZZW8G&amp;l=dataLayer&amp;cx=c"></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-156162365-1"></script>
@@ -730,7 +730,7 @@
     <div class="container" style="max-width:1200px;">
         <div class="row mt-5 mb-3">
             <div class="col text-center">
-                <p class="h2 font-weight-normal">Hierarchical Discrete Flow Matching for Multi-Codebook Codec-based Text-to-Speech</p>
+                <p class="h2 font-weight-normal">Guided Discrete Flow Matching for Step-Efficient Zero-Shot Text-to-Speech</p>
             </div>
         </div>
     </div>
@@ -740,7 +740,7 @@
 
 
         <div class="col text-center h5" style="font-style:italic">
-		<a style="margin: 0 auto;"><span> Joun Yeop Lee, Heejin Choi, Min-Kyung Kim, Ji-Hyun Lee, Hoon-Young Cho
+		<a style="margin: 0 auto;"><span> Heejin Choi, Joun Yeop Lee, Min-Kyung Kim, Hongsun Yang, Hoon-Young Cho
             </span></a></div><a style="margin: 0 auto;">
 
         <!-- <div class='row text-center h5 font-weight-normal pl-1 pr-1 mb-1'>
@@ -782,7 +782,7 @@
 
                 <div class="container" style="max-width:850px; margin-top: 20px; margin-bottom: 40px">
                     <p style="line-height:1.3; font-size:large; text-align: justify">
-						Neural codecs with residual vector quantization (RVQ) yield compact discrete representations that preserve high-fidelity speech. While flow matching-based TTS reports strong quality, directly applying discrete flow matching (DFM) to RVQ tokens under a single-code assumption underutilizes the codec hierarchy. We propose Hierarchical Discrete Flow Matching (H-DFM), a multi-head extension of DFM that aligns training with the RVQ hierarchy via a stochastic coarse/fine curriculum: coarse mode updates with fine masked, and fine mode updates conditioned on ground-truth coarse. Also, we use a coarse-biased inference schedule that allocates most of the refinement budget to coarse codebooks, with a small portion allocated to fine codebooks. Experimental results demonstrate superior improvements compared to the FM baselines, indicating that H-DFM integrates seamlessly with flow-matching-based TTS pipelines.</p>
+						We present DFM-TTS, a non-autoregressive framework that applies discrete flow matching directly to multi-level codec tokens and augments training with two lightweight guidance signals. First, a text-guided consistency head (auxiliary CTC) tightens semantic–acoustic alignment. Second, a coarse-to-fine, time-dependent weighting stabilizes multi-codebook learning without modifying the sampler. Under zero-shot evaluation on LibriTTS, DFM-TTS improves intelligibility and speaker similarity over a retrained F5-TTS baseline while maintaining competitive naturalness, especially in the few-step regime (NFE ∈ {4, 8, 16}). Because the guidance acts only during training, per-step inference cost remains unchanged. Overall, the approach offers a simple, parallel path to step-efficient zero-shot TTS in discrete token space.</p>
                 </div>
             </div>
         </div>
@@ -794,20 +794,10 @@
             <hr>
             <div class="row text-center">
                 <div class="col">
-                    <p class="h2 font-weight-bold ">Zero-Shot TTS Samples</p>
+                    <p class="h2 font-weight-bold ">Baseline Comparison Samples</p>
                 </div>
             </div>
-	    <div>
-            <div class="col text-center">
-                <div class="container" style="max-width:1300px; margin-top: 20px; margin-bottom: 10px">
-                    <p></p>
-                    <p style="line-height:1.3; font-size:large; text-align: justify;">
-                        The proposed models are trained on LibriTTS (train-clean-100, train-clean-360, train-other-500).<br>
-                        Audio samples are sampled from the test-clean subset, ensuring a zero-shot condition by using unseen speakers.
-                    </p>
-                </div>
-            </div>
-	    </div>
+
         <hr>
 
             <div style="display: flex; align-content: center;flex-wrap: nowrap;">
@@ -815,16 +805,7 @@
                     <div class="row" style="width: 575px; height:80px; ">
                         <p style="height: 80px; width: 200px; padding: 15px 0; text-align: center;"><b>Text</b></p>
                         <div style="height: 80px; vertical-align: middle">
-			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Yes, his mother was hostile to the idea, as he had read from her listless silence.</i></font></p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Ground Truth</p>
-                        <div style="height: 60px; vertical-align: middle">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>The chaos in which his ardour extinguished itself was a cold indifferent knowledge of himself.</i></font></p>
                         </div>
                     </div>
 
@@ -832,82 +813,75 @@
                         <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Reference (Prompt)</p>
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/1089_134686_000032_000008.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/001_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Ground Truth</p>
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/zeroshot/001_sys12.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio> 
+                        </div>
+                    </div>
+
+
                     <hr>
                     <div class="row" style="width: 575px; height:50px; ">
                         <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">F5-TTS</p>
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">CosyVoice (AR)</p>
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vits/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/001_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
 
                     <div class="row" style="width: 575px; height:50px; ">
                         <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>F5-DFM</b>
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">FireRedTTS (AR)</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/001_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">MaskGCT (NAR; NFE=32)</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/001_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">F5-TTS (NAR; NFE=32)</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/001_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>DFM-TTS (NAR; NFE=32)</b>
                             </p>
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vallex/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-					<div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>F5-H-DFM-b</b>
-                            </p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/lee/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>F5-H-DFM</b>
-                            </p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/Small_E/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">CosyVoice</p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_MLM/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Lee et al.</p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_INR/1089_134691_000004_000000.wav"" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">FireRedTTS</p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_noMLM/1089_134691_000004_000000.wav"" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/001_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -916,14 +890,14 @@
                 <div style="flex: 1;">
                     <div class="row" style="width: 375px; height:80px; ">
                         <div style="height: 80px; vertical-align: middle">
-			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>I am not good enough for you, and you must be kept from the contamination of too intimate society.</i></font></p>
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>What a very bad notion that was of his, I thought to myself, to take soundings just here!</i></font></p>
                         </div>
                     </div>
 
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -931,7 +905,7 @@
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/3575_170457_000029_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys12.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -941,7 +915,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vits/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -951,7 +925,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vallex/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div><div class="row" style="width: 375px; height:50px; ">
@@ -959,7 +933,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/lee/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -968,7 +942,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/Small_E/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -977,41 +951,24 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_MLM/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_INR/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_noMLM/3575_170457_000044_000011.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/009_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
 		</div>
 
-                <div style="flex: 2;">
+
+        <div style="flex: 2;">
                     <div style="width: 375px; height:80px; " class="row">
                         <div style="height: 80px; vertical-align: middle">
-			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>It won't be much, but I'm grateful to find a friend. I'm guilty, you know</i></font></p>
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Just as he made his cast, he saw the fleeing drake and the pursuing hawk come round the bend.</i></font></p>
                         </div>
                     </div>
 
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_gt_refer.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1019,7 +976,7 @@
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/6829_68771_000046_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_gt.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1029,7 +986,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vits/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1039,7 +996,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vallex/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div><div class="row" style="width: 375px; height:50px; ">
@@ -1047,7 +1004,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/lee/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1056,7 +1013,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/Small_E/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1065,28 +1022,11 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_MLM/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/041_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_INR/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_noMLM/6829_68769_000063_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
+
 		</div>
 
             </div>
@@ -1097,16 +1037,7 @@
                     <div class="row" style="width: 575px; height:80px; ">
                         <p style="height: 80px; width: 200px; padding: 15px 0; text-align: center;"><b>Text</b></p>
                         <div style="height: 80px; vertical-align: middle">
-			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Yes, his mother was hostile to the idea, as he had read from her listless silence.</i></font></p>
-                        </div>
-                    </div>
-
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Ground Truth</p>
-                        <div style="height: 60px; vertical-align: middle">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>In a heightened degree, therefore, the livery comes to be a badge of servitude, or rather servility.</i></font></p>
                         </div>
                     </div>
 
@@ -1114,82 +1045,75 @@
                         <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Reference (Prompt)</p>
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/1089_134686_000032_000008.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/003_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Ground Truth</p>
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/zeroshot/003_sys12.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+
                     <hr>
                     <div class="row" style="width: 575px; height:50px; ">
                         <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">F5-TTS</p>
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">CosyVoice (AR)</p>
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vits/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/003_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
 
                     <div class="row" style="width: 575px; height:50px; ">
                         <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>F5-DFM</b>
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">FireRedTTS (AR)</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/003_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">MaskGCT (NAR; NFE=32)</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/003_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">F5-TTS (NAR; NFE=32)</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/003_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>DFM-TTS (NAR; NFE=32)</b>
                             </p>
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vallex/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-					<div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>F5-H-DFM-b</b>
-                            </p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/lee/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>F5-H-DFM</b>
-                            </p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/Small_E/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">CosyVoice</p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_MLM/1089_134691_000004_000000.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Lee et al.</p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_INR/1089_134691_000004_000000.wav"" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 575px; height:50px; ">
-                        <div style="height: 60px;">
-                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">FireRedTTS</p>
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_noMLM/1089_134691_000004_000000.wav"" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/003_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1198,14 +1122,14 @@
                 <div style="flex: 1;">
                     <div class="row" style="width: 375px; height:80px; ">
                         <div style="height: 80px; vertical-align: middle">
-			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Then the curtain rises, and it is apparent that we are assisting at an At Home of considerable splendour.</i></font></p>
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Without his scrapbooks, his chemicals, and his homely untidiness, he was an uncomfortable man.</i></font></p>
                         </div>
                     </div>
 
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/006_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1213,7 +1137,7 @@
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/7176_92135_000083_000005.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/006_sys12.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1223,7 +1147,79 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vits/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/006_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio> 
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/006_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div><div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/006_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/006_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/006_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+
+		</div>
+
+        <div style="flex: 2;">
+                    <div style="width: 375px; height:80px; " class="row">
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>I'll pay twice sixty dollars for the delivery to me of the forged check, and the withdrawal of the prosecution.</i></font></p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/zeroshot/042_gt_refer.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/zeroshot/042_gt.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/zeroshot/042_sys04.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1233,7 +1229,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vallex/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/042_sys02.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div><div class="row" style="width: 375px; height:50px; ">
@@ -1241,7 +1237,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/lee/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/042_sys03.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1250,7 +1246,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/Small_E/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/042_sys06.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1259,7 +1255,161 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_MLM/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/zeroshot/042_sys07.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                
+		</div>
+
+            </div>
+
+
+                    <!-- Audio Samples -->
+        <div class="col">
+            <hr>
+            <div class="row text-center">
+                <div class="col">
+                    <p class="h2 font-weight-bold ">Step-Wise Samples</p>
+                </div>
+            </div>
+
+        <hr>
+
+
+            <div style="display: flex; align-content: center;flex-wrap: nowrap;">
+                <div style="flex: 1;  ">
+                    <div class="row" style="width: 575px; height:80px; ">
+                        <p style="height: 80px; width: 200px; padding: 15px 0; text-align: center;"><b>Text</b></p>
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Yes, but if she should have understood, and understood too well, she may talk.</i></font></p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Reference (Prompt)</p>
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/stepwise/017_sys01.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Ground Truth</p>
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/stepwise/017_sys12.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <hr>
+                    
+
+                    <div class="row" style="width: 575px; height:80px; ">
+                        <p style="height: 80px; width: 200px; padding: 15px 0; text-align: center;"><b>NFE step</b></p>
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><b>4</b></font></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">F5-TTS</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys06_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">DFM-TTS
+                            </p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys07_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+					<div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">DFM-TTS + TG
+                            </p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys08_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>DFM-TTS + TG + CFTG</b>
+                            </p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys09_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    
+		 </div>
+
+                <div style="flex: 1;">
+                    <div class="row" style="width: 375px; height:80px; ">
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i></i></font></p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+                        </div>
+                    </div>
+
+                    
+                    <hr>
+
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><b>8</b></font></p>
+                        </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys06_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys07_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div><div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/017_sys08_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1268,50 +1418,42 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_INR/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/stepwise/017_sys09_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_noMLM/7176_92135_000056_000002.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
+            
 		</div>
 
                 <div style="flex: 2;">
                     <div style="width: 375px; height:80px; " class="row">
                         <div style="height: 80px; vertical-align: middle">
-			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>It has no beauty whatsoever, no specialty of picturesqueness; and all its lines are cramped and poor.</i></font></p>
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i></i></font></p>
                         </div>
                     </div>
 
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
                         </div>
                     </div>
 
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px; vertical-align: middle">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
-                                <source src="./assets/GT/1188_133604_000026_000001.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
                         </div>
                     </div>
+
                     <hr>
+                    
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><b>16</b></font></p>
+                        </div>
+
                     <div class="row" style="width: 375px; height:50px; ">
                         <div style="height: 60px;">
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vits/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/stepwise/017_sys06_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1321,7 +1463,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/vallex/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/stepwise/017_sys07_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div><div class="row" style="width: 375px; height:50px; ">
@@ -1329,7 +1471,7 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/lee/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/stepwise/017_sys08_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
@@ -1338,43 +1480,229 @@
                         </div>
                         <div style="height: 60px; ">
                             <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/Small_E/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                                <source src="./assets/stepwise/017_sys09_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
                             </audio>
                         </div>
                     </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_MLM/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_INR/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-                    <div class="row" style="width: 375px; height:50px; ">
-                        <div style="height: 60px;">
-                        </div>
-                        <div style="height: 60px; ">
-                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
-                                <source src="./assets/SMAM_noMLM/1188_133604_000061_000006.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
-                            </audio>
-                        </div>
-                    </div>
-
 		</div>
+
             </div>
-            <hr>
 
 
+
+        <hr>
+
+
+            <div style="display: flex; align-content: center;flex-wrap: nowrap;">
+                <div style="flex: 1;  ">
+                    <div class="row" style="width: 575px; height:80px; ">
+                        <p style="height: 80px; width: 200px; padding: 15px 0; text-align: center;"><b>Text</b></p>
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i>Whoever, therefore, is ambitious of distinction in this way ought to be prepared for disappointment.</i></font></p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Reference (Prompt)</p>
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/stepwise/021_gt_refer.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">Ground Truth</p>
+                        <div style="height: 60px; vertical-align: middle">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px; width: 335px; height: 50px">
+                                <source src="./assets/stepwise/021_gt.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <hr>
+                    
+
+                    <div class="row" style="width: 575px; height:80px; ">
+                        <p style="height: 80px; width: 200px; padding: 15px 0; text-align: center;"><b>NFE step</b></p>
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><b>4</b></font></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">F5-TTS</p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys06_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">DFM-TTS
+                            </p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys07_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+					<div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;">DFM-TTS + TG
+                            </p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys08_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 575px; height:50px; ">
+                        <div style="height: 60px;">
+                            <p style="height: 60px; width: 200px; padding: 15px 0; text-align: center;"><b>DFM-TTS + TG + CFTG</b>
+                            </p>
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys09_4.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    
+		 </div>
+
+                <div style="flex: 1;">
+                    <div class="row" style="width: 375px; height:80px; ">
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i></i></font></p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+                        </div>
+                    </div>
+
+                    
+                    <hr>
+
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><b>8</b></font></p>
+                        </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys06_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys07_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div><div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys08_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys09_8.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+            
+		</div>
+
+                <div style="flex: 2;">
+                    <div style="width: 375px; height:80px; " class="row">
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><i></i></font></p>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px; vertical-align: middle">
+                        </div>
+                    </div>
+
+                    <hr>
+                    
+                        <div style="height: 80px; vertical-align: middle">
+			<p style="height: 80px; width: 335px; padding: 15px 0; text-align: center;"><font size="2"><b>16</b></font></p>
+                        </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys06_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys07_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div><div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys08_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="row" style="width: 375px; height:50px; ">
+                        <div style="height: 60px;">
+                        </div>
+                        <div style="height: 60px; ">
+                            <audio controls="" controlslist="nodownload" style="display: inline-block; padding:8px; width: 335px; height: 50px ">
+                                <source src="./assets/stepwise/021_sys09_16.wav" class="img-fluid rounded mx-auto d-block" alt="temp">
+                            </audio>
+                        </div>
+                    </div>
+		</div>
+
+            </div>
 
                 <!-- Optional JavaScript -->
                 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
